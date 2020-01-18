@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0">
+         <items>
+            <AnchorPane fx:id="loginAnchorPane" prefHeight="544.0" prefWidth="201.0">
+               <children>
+                  <Button fx:id="signInButton" layoutX="162.0" layoutY="21.0" mnemonicParsing="false" onAction="#zalogujAction" text="Loguj" />
+                  <TextField fx:id="passwordTextField" layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="137.0" text="Zaloguj się" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="actionAnchorPane">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="544.0" prefWidth="460.0">
+                     <children>
+                        <AnchorPane id="Content" fx:id="seanseListAnchorPane" minHeight="-1.0" minWidth="-1.0" prefHeight="159.0" prefWidth="450.0">
+                           <children>
+                              <TextField fx:id="titleTextField" layoutX="6.0" layoutY="67.0" prefHeight="26.0" prefWidth="110.0" text="Tytuł" />
+                              <TextField fx:id="gatunekTextField" layoutX="156.0" layoutY="67.0" prefHeight="26.0" prefWidth="118.0" text="Gatunek" />
+                              <TextField fx:id="ticketNumberTextField" layoutX="318.0" layoutY="67.0" prefHeight="26.0" prefWidth="128.0" text="Ilosc biletow" />
+                              <Button fx:id="addSeansButton" layoutX="136.0" layoutY="123.0" mnemonicParsing="false" onAction="#dodajSeansAction" text="Dodaj" />
+                              <Button fx:id="delateSeansButton" layoutX="254.0" layoutY="123.0" mnemonicParsing="false" onAction="#usunSeansAction" text="Usuń" />
+                              <Text layoutX="14.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aby utworzyć/usunąć seans podaj:" wrappingWidth="231.9830722808838" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ticketAnchorPane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="rezerwujButton" layoutX="89.0" layoutY="133.0" mnemonicParsing="false" onAction="#rezerwujBiletAction" text="Rezerwuj" />
+                              <Button fx:id="buyButton" layoutX="203.0" layoutY="101.0" mnemonicParsing="false" onAction="#kupBiletAction" text="Kup" />
+                              <Button fx:id="zwrocButton" layoutX="299.0" layoutY="133.0" mnemonicParsing="false" onAction="#zwrocBiletAction" text="Zwróć" />
+                              <TextField fx:id="titleTicketTextField" layoutX="13.0" layoutY="45.0" text="Tytuł" />
+                              <TextField fx:id="ticketnumberTextField" layoutX="268.0" layoutY="45.0" text="Ilość biletów" />
+                              <Button fx:id="sellButton" layoutX="196.0" layoutY="170.0" mnemonicParsing="false" onAction="#sprzedajBiletAction" text="Sprzedaj" />
+                              <Text layoutX="40.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Podaj tytuł i ilość biletów aby kupić/zarezewować bilet" wrappingWidth="365.90106201171875" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="searchAnchorPane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="135.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyświetlanie seansów" textAlignment="CENTER" wrappingWidth="208.0" />
+                              <Button fx:id="showAllButton" layoutX="25.0" layoutY="45.0" mnemonicParsing="false" onAction="#showAllAction" prefHeight="32.0" prefWidth="120.0" text="Wyświetl wszystkie" />
+                              <Button fx:id="searchTitleButton" layoutX="25.0" layoutY="101.0" mnemonicParsing="false" onAction="#searchTitleAction" prefHeight="32.0" prefWidth="118.0" text="Wyszukaj tytuł" />
+                              <TextField fx:id="parametrTextFiled" layoutX="194.0" layoutY="105.0" text="Czego szukać?" />
+                              <Button fx:id="searchGatunekButton" layoutX="25.0" layoutY="155.0" mnemonicParsing="false" onAction="#searchGatunekAction" prefHeight="32.0" prefWidth="131.0" text="Wyszukaj gatunek" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <TextArea editable="false" prefHeight="439.0" prefWidth="208.0" />
+         </items>
+      </SplitPane>
+      <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+         <children>
+            <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="infoSys" alignment="CENTER" layoutX="127.0" prefHeight="26.0" prefWidth="653.0" text="Informacje" />
+               </children>
+            </Pane>
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
